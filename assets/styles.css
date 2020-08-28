@@ -1,0 +1,303 @@
+
+  /* Base Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  /* NOTE
+  html is set to 62.5% so that all the REM measurements throughout Skeleton
+  are based on 10px sizing. So basically 1.5rem = 15px :) */
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(50, 50, 50);
+  }
+  
+  /* Typography
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    font-family: Source Sans Pro;
+    color: #004E64;
+  }
+  h1 {
+    font-size: 7rem;
+    line-height: 0.6;
+    letter-spacing: -0.1rem;
+    margin-bottom: 4rem;
+    font-weight: 900;
+    color: #7067CF;
+  }
+
+
+  h2 {
+    font-size: 3,3rem;
+    line-height: 1.2;
+    letter-spacing: -0.1rem;
+    margin-bottom: 1.8rem;
+    margin-top: 0.1rem;
+    text-align: center;
+    font-weight: 600;
+
+  }
+
+  h3 {
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: -0.1rem;
+    margin-bottom: 1.8rem;
+    margin-top: 1.8rem;
+    text-align: center;
+    font-weight: 385;
+    color: #004E64;
+    
+
+  }
+
+
+  h5 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: -0.1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0rem;
+    text-align: center;
+    font-weight: 385;
+
+  }
+  
+  p {
+    margin-top: 0;
+
+  }
+
+  hr {
+    width:50%;
+    color: #004E64;
+  }
+  
+  /* Links
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  a {
+    color: #1eaedb;
+    text-decoration: underline;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  a:hover {
+    color: #0fa0ce;
+  }
+
+  /* Custom
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+   
+  body {
+      background-color: #f2f2f2;
+  }
+
+  .pretty_container {
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin: 10px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 2px 2px 2px lightgrey;
+  }
+  
+  .bare_container {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+  
+  .dcc_control {
+    margin: 0;
+    padding: 5px;
+    width: calc(100%-40px);
+  }
+  
+  .control_label {
+    margin: 0;
+    padding: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    width: calc(100%-40px);
+  }
+  
+  
+
+/* ____________________________________________________________*/
+/* _____________________________ WORLD_________________________*/
+/* ____________________________________________________________*/
+
+
+section {
+  width:100%;
+  max-width:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  margin: auto;
+
+  
+}
+
+#world_line_1{
+  display: flex;
+  justify-content: center;
+
+}
+
+#world_map{
+  width:80%;
+}
+
+#grafico_cidade {
+  width:59%;
+
+}
+
+#grafico {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#world_line_2{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#grafico_race_bairro{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#grafico_race_regiao{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.mini_container_recuperados {
+  border-radius: 13px;
+  background-color: #2C8C99;
+  margin: 10px;
+  padding: 15px;
+  position: relative;
+  font-weight: 900;
+  box-shadow: 3px 3px 3px lightgrey;
+  min-width:20%;
+  color: #FFFFFB;
+  justify-content: center;
+  text-align: center;
+  /* font-family: Roboto bold 700; */
+}
+
+.mini_container_confirmados {
+  border-radius: 13px;
+  background-color: #7B287D;
+  margin: 10px;
+  padding: 15px;
+  position: relative;
+  font-weight: 900;
+  box-shadow: 3px 3px 3px lightgrey;
+  min-width:20%;
+  color: #FFFFFB;
+  justify-content: center;
+  text-align: center;
+  /* font-family: Roboto bold 700; */
+}
+
+.mini_container_branco {
+  border-radius: 13px;
+  background-color: #FFFFFB;
+  margin: 10px;
+  padding: 15px;
+  position: relative;
+  font-weight: 900;
+  box-shadow: 3px 3px 3px lightgrey;
+  min-width:20%;
+  color: #7067CF;
+  justify-content: center;
+  text-align: center;
+}
+
+.mini_container_obitos {
+  border-radius: 13px;
+  background-color: #330C2F;
+  margin: 10px;
+  padding: 15px;
+  position: relative;
+  font-weight: 900;
+  box-shadow: 3px 3px 3px lightgrey;
+  min-width:20%;
+  color: #FFFFFB;
+  justify-content: center;
+  text-align: center;
+  /* font-family: Roboto; */
+}
+
+#fontes_footer{
+  display: flex;
+  align-items: space-around;
+  justify-content: center;
+} 
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 10px;
+  color: #004E64;
+  text-decoration: none;
+}
+
+#platforms_links{
+  display: flex;
+  align-items: space-around;
+  justify-content: center;
+}
+#platforms_links2{
+  display: flex;
+  align-items: space-around;
+  justify-content: center;
+}
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 10px;
+  color: #004E64;
+  text-decoration: none;
+}
