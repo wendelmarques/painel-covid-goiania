@@ -167,7 +167,7 @@ fontes_footer2 = html.Div(
         ),
 
         html.A(
-            href='https://developers.google.com/maps/documentation/geocoding/starta',
+            href='https://developers.google.com/maps/documentation/geocoding',
             children=[
                 html.Img(src=app.get_asset_url('maps.png'), width=55, height=49),
             ]
@@ -270,10 +270,6 @@ app.layout = html.Div(
 
                 html.Br(),
 
-                links_header,
-
-                html.Br(),
-
                 html.H5(
                     "Para informações oficiais, acesse:", 
                     style={"margin-top": "10px"}
@@ -288,6 +284,10 @@ app.layout = html.Div(
                     ],
                     id="button",
                 ),
+
+                html.Br(),
+
+                links_header,
                             
             ],
         ),
