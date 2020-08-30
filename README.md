@@ -1,8 +1,12 @@
 <div align="center">
 <h1> Painel COVID GYN</h1>
 <p>Informações sobre a evolução dos casos confirmados em Goiânia</p>
+  </div>
 <br>
-painel-covid-goiania.herokuapp.com
+<div align="center">
+<p align="center">
+  <a href="painel-covid-goiania.herokuapp.com">painel-covid-goiania.herokuapp.com</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ </p>
 <br>
 <br>
 <p align="center">
