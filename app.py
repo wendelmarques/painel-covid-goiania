@@ -158,6 +158,13 @@ fontes_footer2 = html.Div(
                 html.Img(src=app.get_asset_url('ufg.png'), width=150, height=45,),
             ],
         ),
+        html.A(
+            href='https://brasil.io/dataset/covid19/caso/?search=&date=&state=&city=&place_type=&is_last=&city_ibge_code=5208707&order_for_place=',
+            children=[
+                html.Img(src=app.get_asset_url('brasil-io.jpg')),
+                
+            ],
+        ),
 
         html.A(
             href='https://developers.google.com/maps/documentation/geocoding/starta',
@@ -254,10 +261,10 @@ app.layout = html.Div(
 
         html.Div(            
             [   
-                html.H4("Sobre"),
+                html.H4("Aviso"),
 
                 html.H5(
-                    "Os dados utilizados para geração do mapa e dos gráficos, foram retirados dos Informes Epidemiológicos publicados (em PDFs) pela Prefeitura de Goiânia, por meio de uma técnica chamada Data Scraping (algoritmos que realizam a tarefa de extração). São divulgadas apenas informações sobre alguns bairros - os que possuem mais casos confirmados acumulados, por isso, foram extraídos dados de 111 bairros.", 
+                    "Os dados utilizados para geração do mapa e dos gráficos dos bairros foram retirados dos Informes Epidemiológicos publicados (em PDFs) pela Prefeitura de Goiânia, por meio de uma técnica chamada Data Scraping (algoritmos que realizam a tarefa de extração). São divulgadas apenas informações sobre alguns bairros - os que possuem mais casos confirmados acumulados, por isso, foram extraídos dados de 111 bairros.", 
                     style={"margin-top": "10px"}
                 ),
 
@@ -394,14 +401,28 @@ app.layout = html.Div(
                 html.P(
                         [
                             html.H2("Casos acumulados em Goiânia"),
-                            html.H5("(dados apenas dos 111 bairros listados a seguir)"),
-                            html.H5("(alguns Informes Epidemiológicos possuem os mesmos dados dos dias anteriores, por isso existem algumas das lacunas)")
-                        
+                            html.H4("Fonte: brasil.io/dataset/covid19"),                                                
                         ],
                         className="control_label",
                 ),
                 
-                dcc.Graph(id='grafico_cidade', figure=world['grafico_bar']),                              
+                dcc.Graph(id='grafico_cidade_casos', figure=world['grafico_bar_casos']),                              
+            ], 
+            className="pretty_container",
+            style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
+        ),
+
+        html.Div(            
+            [   
+                html.P(
+                        [
+                            html.H2("Número de óbitos acumulados em Goiânia"),
+                            html.H4("Fonte: brasil.io/dataset/covid19"),                                                
+                        ],
+                        className="control_label",
+                ),
+                
+                dcc.Graph(id='grafico_cidade_obitos', figure=world['grafico_bar_obitos']),                              
             ], 
             className="pretty_container",
             style={"display": "flex", "flex-direction": "column", "justify-content": "center"},

@@ -15,9 +15,15 @@ pd.set_option('chained_assignment', None)
 
 ##############cria_grafico########################
 
-def cria_grafico(df_grafico):
-    fig = px.bar(df_grafico, x='Datas', y='Casos confirmados')
+def cria_grafico_casos(df_grafico):
+    fig = px.bar(df_grafico, x='Data', y='Casos confirmados')
     return fig.update_traces()
+
+def cria_grafico_obitos(df_grafico):
+    fig = px.bar(df_grafico, x='Data', y='Óbitos')
+    return fig.update_traces()
+
+
 
 
 
@@ -183,7 +189,8 @@ if __name__ =="__main__":
     df_grafic = pd.read_csv(raw_dataset_path_dataset_grafico, sep=',')
     
     #cria grafico
-    grafico_cidade = cria_grafico(df_grafic)
+    grafico_cidade_casos = cria_grafico_casos(df_grafic)
+    grafico_cidade_obitos = cria_grafico_obitos(df_grafic)
 
     # preparando map
     fig_world = create_world_fig(df_world, mapbox_access_token=mapbox_access_token)
@@ -196,7 +203,8 @@ if __name__ =="__main__":
     # Armazenamento de todas as informações necessárias para o aplicativo
     save = {
         'figure':fig_world,
-        'grafico_bar': grafico_cidade,
+        'grafico_bar_casos': grafico_cidade_casos,
+        'grafico_bar_obitos': grafico_cidade_obitos,
         'last_date':dataFormatada,
         'lista_bairros': bairros,
         'total_confirmed': f.spacify_number(int(df_total_kpi['confirmed'])),
