@@ -342,7 +342,7 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Evoluçao dos casos acumulados")
+                            html.H2("Evolução dos casos acumulados")
                         ],
                         className="control_label",
                 ),
@@ -358,7 +358,7 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Evoluçao dos casos acumulados por bairro"), html.H6("(alguns bairros)"),
+                            html.H2("Evolução dos casos acumulados por bairro"), html.H6("(alguns bairros)"),
                         ],
                         className="control_label",
                 ),
@@ -376,7 +376,7 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Evoluçao dos casos acumulados por região")
+                            html.H2("Evolução dos casos acumulados por região")
                         ],
                         className="control_label",
                 ),
@@ -393,7 +393,7 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Casos acumulados por dia"),
+                            html.H2("Casos acumulados em Goiânia"),
                             html.H5("(dados apenas dos 111 bairros listados a seguir)"),
                             html.H5("(alguns Informes Epidemiológicos possuem os mesmos dados dos dias anteriores, por isso existem algumas das lacunas)")
                         
@@ -523,9 +523,9 @@ app.layout = html.Div(
             [
                 html.Div(
                     [   
-                        html.H5("github.com/wendelmarques/painel-covid-goiania"),
-                        html.H5("linkedin.com/in/wendelmarques"),
-                        html.H4("Criado com muito cuidado por Wendel Marques"),
+                        html.H6("github.com/wendelmarques/painel-covid-goiania"),
+                        html.H6("linkedin.com/in/wendelmarques"),
+                        html.H5("Criado com muito cuidado por Wendel Marques"),
                         html.H6("stay safe | ✊🏿"),
                     ],style={"margin-bottom": "3px"},                        
                 ),  
