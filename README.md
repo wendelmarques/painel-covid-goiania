@@ -17,7 +17,6 @@ painel-covid-goiania.herokuapp.com
 <img src="https://img.shields.io/github/repo-size/wendelmarques/mapeamento-medias-enem-folium?color=blueviolet">
 <img src="https://img.shields.io/github/languages/count/wendelmarques/mapeamento-medias-enem-folium?color=blueviolet">
 <img src="https://img.shields.io/github/followers/wendelmarques?color=blueviolet">
-<img src="https://img.shields.io/github/license/wendelmarques/painel-covid-goiania/" alt="License">
 
 </p>
 
