@@ -17,7 +17,7 @@ painel-covid-goiania.herokuapp.com
 <img src="https://img.shields.io/github/repo-size/wendelmarques/mapeamento-medias-enem-folium?color=blueviolet">
 <img src="https://img.shields.io/github/languages/count/wendelmarques/mapeamento-medias-enem-folium?color=blueviolet">
 <img src="https://img.shields.io/github/followers/wendelmarques?color=blueviolet">
- <img src="https://img.shields.io/github/license/lamia-utfpr/IC02-2019-Painel-de-Dados-Covid19" alt="License">
+
 </p>
 
 <h4 align="center"> 
@@ -47,7 +47,7 @@ O projeto utiliza abordagens de ciência dos dados para desenvolver um painel de
 <a id="objetivos"></a>
 ## Objetivos
   - Coletar dados sobre a COVID-19 no âmbito municipal (por bairro)
-  - Construir esquemas de visualização da informação que possua interpretação simples e objetiva
+  - Construir esquemas de visualização (mapas e gráficos) possuam interpretação simples e objetiva
   
 <a id="dados"></a>
 ## Dados
