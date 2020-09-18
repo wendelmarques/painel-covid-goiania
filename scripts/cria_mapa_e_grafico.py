@@ -16,12 +16,23 @@ pd.set_option('chained_assignment', None)
 ##############cria_grafico########################
 
 def cria_grafico_casos(df_grafico):
-    fig = px.bar(df_grafico, x='Data', y='Casos confirmados')
-    return fig.update_traces()
+    fig = px.bar(df_grafico, x='Data', y='Casos confirmados', color='Casos confirmados', labels={'Casos confirmados':'Quantidade de casos confirmados'})
+    return fig.update(layout_coloraxis_showscale=False)
+
 
 def cria_grafico_obitos(df_grafico):
-    fig = px.bar(df_grafico, x='Data', y='Óbitos')
-    return fig.update_traces()
+    fig = px.bar(df_grafico, x='Data', y='Óbitos', color='Óbitos', labels={'Óbitos':'Quantidade de casos fatais'})
+    return fig.update(layout_coloraxis_showscale=False)
+
+def cria_grafico_casos_por_dia(df_grafico):
+    fig = px.bar(df_grafico, x='data', y='casos', color='casos', labels={'casos':'Quantidade de casos confirmados', 'data': 'Data'})
+    return fig.update(layout_coloraxis_showscale=False)
+
+def cria_grafico_obitos_por_dia(df_grafico):
+    fig = px.bar(df_grafico, x='data', y='obitos', color='obitos', labels={'obitos':'Quantidade de casos fatais', 'data': 'Data'})
+    return fig.update(layout_coloraxis_showscale=False)
+
+
 
 
 
@@ -173,7 +184,8 @@ if __name__ =="__main__":
     # Carregando informações necessárias
     mapbox_access_token = f.config['mapbox']['secret_token']
     raw_dataset_path_dataset_covid = f.RAW_PATH + f.config['path']['name']
-    raw_dataset_path_dataset_grafico = f.RAW_PATH + f.config['path']['grph']
+    raw_dataset_path_dataset_grafico_acumulado = f.RAW_PATH + f.config['path']['grph_acumulado']
+    raw_dataset_path_dataset_grafico_por_dia = f.RAW_PATH + f.config['path']['grph_dia']
     
     #criacao do dataframe
     df_gyn = pd.read_csv(raw_dataset_path_dataset_covid, sep=',')
@@ -186,11 +198,14 @@ if __name__ =="__main__":
     df_total_kpi = df_world.groupby('date').sum().sort_index().iloc[-1]
 
     #cria dataframe com o dados para o grafico
-    df_grafic = pd.read_csv(raw_dataset_path_dataset_grafico, sep=',')
+    df_cidade_acumulado = pd.read_csv(raw_dataset_path_dataset_grafico_acumulado, sep=',')
+    df_cidade_por_dia = pd.read_csv(raw_dataset_path_dataset_grafico_por_dia, sep=',')
     
     #cria grafico
-    grafico_cidade_casos = cria_grafico_casos(df_grafic)
-    grafico_cidade_obitos = cria_grafico_obitos(df_grafic)
+    grafico_cidade_casos = cria_grafico_casos(df_cidade_acumulado)
+    grafico_cidade_obitos = cria_grafico_obitos(df_cidade_acumulado)
+    grafico_casos_por_dia = cria_grafico_casos_por_dia(df_cidade_por_dia)
+    grafico_obitos_por_dia = cria_grafico_obitos_por_dia(df_cidade_por_dia)
 
     # preparando map
     fig_world = create_world_fig(df_world, mapbox_access_token=mapbox_access_token)
@@ -205,6 +220,8 @@ if __name__ =="__main__":
         'figure':fig_world,
         'grafico_bar_casos': grafico_cidade_casos,
         'grafico_bar_obitos': grafico_cidade_obitos,
+        'grafico_bar_obitos_por_dia': grafico_obitos_por_dia,
+        'grafico_bar_casos_por_dia': grafico_casos_por_dia,
         'last_date':dataFormatada,
         'lista_bairros': bairros,
         'total_confirmed': f.spacify_number(int(df_total_kpi['confirmed'])),

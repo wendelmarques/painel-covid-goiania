@@ -12,7 +12,7 @@
 # Os dados utilizados para geração do mapa e dos gráficos, foram retirados dos Informes Epidemiológicos 
 # publicados (em PDFs) pela Prefeitura de Goiânia, por meio de uma técnica chamada Data Scraping 
 # (algoritmos que realizam a tarefa de extração). São divulgadas apenas informações sobre alguns 
-# bairros - os que possuem mais casos confirmados acumulados, por isso, foram extraídos dados de 111 
+# bairros - os que possuem mais casos confirmados acumulados, por isso, foram extraídos dados de 114
 # bairros. Para mais informações, acesse: saude.goiania.go.gov.br
 
 
@@ -111,9 +111,9 @@ app.config.suppress_callback_exceptions = True
 ############################## alterar_manuamente ######################
 
 
-total_confirmados_com_outros_bairros = "33 718"
-obitos_confirmados = "903"
-total_recuperados = "31 205"
+total_confirmados_com_outros_bairros = "48 529"
+obitos_confirmados = "1 163"
+total_recuperados = "45 530"
 # https://saude.goiania.go.gov.br/goiania-contra-o-coronavirus/
 
 
@@ -264,14 +264,14 @@ app.layout = html.Div(
                 html.H4("Aviso"),
 
                 html.H5(
-                    "Os dados utilizados para geração do mapa e dos gráficos dos bairros foram retirados dos Informes Epidemiológicos publicados (em PDFs) pela Prefeitura de Goiânia, por meio de uma técnica chamada Data Scraping (algoritmos que realizam a tarefa de extração). São divulgadas apenas informações sobre alguns bairros - os que possuem mais casos confirmados acumulados, por isso, foram extraídos dados de 111 bairros.", 
+                    "Os dados utilizados para geração do mapa e dos gráficos dos bairros e regiões foram extraídos dos Informes Epidemiológicos publicados (em PDFs) pela Prefeitura de Goiânia, por meio de uma técnica chamada Data Scraping (algoritmos que realizam a tarefa de extração). Além disso, vale ressaltar que são divulgadas apenas informações sobre alguns bairros - os que possuem mais casos confirmados acumulados, por isso, foram extraídos dados de 114 bairros. Os demais gráficos contêm dados de toda a cidade.", 
                     style={"margin-top": "10px"}
                 ),
 
                 html.Br(),
 
                 html.H5(
-                    "Para informações oficiais, acesse:", 
+                    "Obtenha informações oficiais em:", 
                     style={"margin-top": "10px"}
                 ),
 
@@ -285,7 +285,7 @@ app.layout = html.Div(
                     id="button",
                 ),
 
-                html.Br(),
+
 
                 links_header,
                             
@@ -349,7 +349,7 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Evolução dos casos acumulados")
+                            html.H2("Evolução dos casos acumulados por dia e por bairro")
                         ],
                         className="control_label",
                 ),
@@ -358,8 +358,74 @@ app.layout = html.Div(
             ],
             className="pretty_container",
         ),
+        brs,
+        html.Div(            
+            [   
+                html.P(
+                        [
+                            html.H2("Núm. de casos por data de divulgação*"),
+                            html.H6("*data na qual a prefeitura divulgou"),
+                        ],
+                        className="control_label",
+                ),
+                
+                dcc.Graph(id='grafico_casos_por_dia', figure=world['grafico_bar_casos_por_dia']),                              
+            ], 
+            className="pretty_container",
+            style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
+        ),
+        brs,
+        html.Div(            
+            [   
+                html.P(
+                        [
+                            html.H2("Núm. de óbitos por data de divulgação"),
+                        ],
+                        className="control_label",
+                ),
+                
+                dcc.Graph(id='grafico_obitos_por_dia', figure=world['grafico_bar_obitos_por_dia']),                              
+            ], 
+            className="pretty_container",
+            style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
+        ),
+
 
         brs,
+        html.Div(            
+            [   
+                html.P(
+                        [
+                            html.H2("Casos confirmados acumulados por dia"),
+                            html.H4("Fonte: brasil.io/dataset/covid19"),                                                
+                        ],
+                        className="control_label",
+                ),
+                
+                dcc.Graph(id='grafico_cidade_casos', figure=world['grafico_bar_casos']),                              
+            ], 
+            className="pretty_container",
+            style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
+        ),
+        brs,
+
+        html.Div(            
+            [   
+                html.P(
+                        [
+                            html.H2("Casos fatais acumulados por dia"),
+                            html.H4("Fonte: brasil.io/dataset/covid19"),                                                
+                        ],
+                        className="control_label",
+                ),
+                
+                dcc.Graph(id='grafico_cidade_obitos', figure=world['grafico_bar_obitos']),                              
+            ], 
+            className="pretty_container",
+            style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
+        ),
+
+       brs,
 
         html.Div(            
             [   
@@ -391,40 +457,6 @@ app.layout = html.Div(
                 html.Video(src=app.get_asset_url('bar_race_regiao.mp4'), controls=True, autoPlay=True, height = 343),
                             
             ],className="pretty_container",
-            style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
-        ),
-
-        brs,
-
-        html.Div(            
-            [   
-                html.P(
-                        [
-                            html.H2("Casos acumulados em Goiânia"),
-                            html.H4("Fonte: brasil.io/dataset/covid19"),                                                
-                        ],
-                        className="control_label",
-                ),
-                
-                dcc.Graph(id='grafico_cidade_casos', figure=world['grafico_bar_casos']),                              
-            ], 
-            className="pretty_container",
-            style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
-        ),
-
-        html.Div(            
-            [   
-                html.P(
-                        [
-                            html.H2("Número de óbitos acumulados em Goiânia"),
-                            html.H4("Fonte: brasil.io/dataset/covid19"),                                                
-                        ],
-                        className="control_label",
-                ),
-                
-                dcc.Graph(id='grafico_cidade_obitos', figure=world['grafico_bar_obitos']),                              
-            ], 
-            className="pretty_container",
             style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
         ),
 
@@ -544,9 +576,9 @@ app.layout = html.Div(
             [
                 html.Div(
                     [   
+                        html.H5("Criado com muito cuidado por Wendel Marques"),
                         html.H6("github.com/wendelmarques/painel-covid-goiania"),
                         html.H6("linkedin.com/in/wendelmarques"),
-                        html.H5("Criado com muito cuidado por Wendel Marques"),
                         html.H6("stay safe | ✊🏿"),
                     ],style={"margin-bottom": "3px"},                        
                 ),  
@@ -569,7 +601,7 @@ if __name__ == "__main__":
     
     # Display app start
     logger.error('*' * 80)
-    logger.error('App initialisation')
+    logger.error('Inicialização do aplicativo')
     logger.error('*' * 80)
 
     # Starting flask server
