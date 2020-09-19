@@ -24,13 +24,34 @@ def cria_grafico_obitos(df_grafico):
     fig = px.bar(df_grafico, x='Data', y='Óbitos', color='Óbitos', labels={'Óbitos':'Quantidade de casos fatais'})
     return fig.update(layout_coloraxis_showscale=False)
 
-def cria_grafico_casos_por_dia(df_grafico):
-    fig = px.bar(df_grafico, x='data', y='casos', color='casos', labels={'casos':'Quantidade de casos confirmados', 'data': 'Data'})
-    return fig.update(layout_coloraxis_showscale=False)
+def cria_grafico_casos_por_dia(df):
+    fig = px.bar(df, x='data', y='casos', labels={'casos':'N° de casos confirmados diários', 'data': 'Data de divulgação'})
 
-def cria_grafico_obitos_por_dia(df_grafico):
-    fig = px.bar(df_grafico, x='data', y='obitos', color='obitos', labels={'obitos':'Quantidade de casos fatais', 'data': 'Data'})
-    return fig.update(layout_coloraxis_showscale=False)
+    fig.add_trace(
+    go.Scatter(
+        x=df['data'],
+        y=df['MM_casos'],
+        name='Média Móvel - 7 dias',
+        hovertemplate= "Média Móvel: %{x}<br>Data: %{y}<extra></extra>",
+
+    ))
+
+    return fig.update_traces()
+
+
+def cria_grafico_obitos_por_dia(df):
+    fig = px.bar(df, x='data', y='obitos', labels={'obitos':'N° de óbitos diários', 'data': 'Data de divulgação'})
+
+    fig.add_trace(
+        go.Scatter(
+            x=df['data'],
+            y=df['MM_obitos'],
+            name='Média Móvel - 7 dias',
+            hovertemplate= "Média Móvel: %{x}<br>Data: %{y}<extra></extra>",
+
+    ))
+
+    return fig.update()
 
 
 
@@ -200,6 +221,7 @@ if __name__ =="__main__":
     #cria dataframe com o dados para o grafico
     df_cidade_acumulado = pd.read_csv(raw_dataset_path_dataset_grafico_acumulado, sep=',')
     df_cidade_por_dia = pd.read_csv(raw_dataset_path_dataset_grafico_por_dia, sep=',')
+    
     
     #cria grafico
     grafico_cidade_casos = cria_grafico_casos(df_cidade_acumulado)

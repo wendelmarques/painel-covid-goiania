@@ -363,8 +363,8 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Núm. de casos por data de divulgação*"),
-                            html.H6("*data na qual a prefeitura divulgou"),
+                            html.H2("Casos confirmados por data* de divulgação e média movel"),
+                            html.H6("*Data na qual a prefeitura divulgou e não necessariamente a data do resultado do exame."),
                         ],
                         className="control_label",
                 ),
@@ -379,7 +379,12 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Núm. de óbitos por data de divulgação"),
+                            html.H2("Óbitos por data* de divulgação e média móvel"),
+                            html.H6("*Data na qual a prefeitura divulgou e não necessariamente a data do óbito."),
+                            html.H6("A média móvel por data do óbito está disponivel no site:"),
+                            html.H6("saude.goiania.go.gov.br/goiania-contra-o-coronavirus/informe-epidemiologico-covid-19"),
+                            
+
                         ],
                         className="control_label",
                 ),
