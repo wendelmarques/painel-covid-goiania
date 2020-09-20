@@ -1,0 +1,1093 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INFORME EPIDEMIOLÓGICO - COVID-19
+EDIÇÃO n° 169 - Dados preliminares, atualizados em 18.09.2020 às 12:00 horas 
+
+SECRETARIA MUNICIPAL DE SAÚDE
+SUPERINTENDÊNCIA DE VIGILÂNCIA EM SAÚDE
+
+DIRETORIA DE VIGILÂNCIA EPIDEMIOLÓGICA
+GERÊNCIA DE DOENÇAS E AGRAVOS TRANSMISSÍVEIS
+
+CENTRO DE INFORMAÇÕES ESTRATÉGICAS E RESPOSTA EM 
+VIGILÂNCIA EM SAÚDE
+
+Fonte dos dados: SIVEP-Gripe; E-SUS VE e CIEVS-Goiânia/GEDAT/DVE/SVS
+
+Global
+30.055.710 Confirmados
+
+943.433 óbitos
+Fonte: 
+
+https://www.who.int/emergencies/diseases/n
+ovel-coronavirus-2019
+
+Brasil
+4.455.386 Confirmados
+
+134.935 óbitos
+Fonte: 
+
+https://covid.saude.gov.br/ 
+
+Goiás
+180.988 Confirmados
+
+4.092 óbitos
+Fonte: 
+
+https://extranet.saude.go.gov.br/pentaho/api/repos/:coronavir
+us:paineis:painel.wcdf/generatedContent
+
+POR FAVOR, 
+FIQUE EM CASA.
+
+CASOS TOTAIS CONFIRMADOS DE INDIVÍDUOS RESIDENTES EM GOIÂNIA
+
+Página 1
+
+Goiânia
+49.491 casos confirmados (962 casos novos)
+
+1.187 óbitos confirmados (24 óbitos novos)
+
+Figura 1 – Número e percentual de evolução dos casos confirmados na data de hoje
+
+46461
+94%
+
+446
+1%
+
+1397
+3%
+
+1187
+2%
+
+Curados: 46461
+
+Internados: 446
+
+Em acompanhamento domiciliar: 1397
+
+Óbito: 1187
+
+Figura 2 – Distribuição dos óbitos por data do evento e média móvel
+
+Figura 3 – Distribuição dos casos confirmados com Síndrome Respiratória Aguda Grave (SRAG) por data de 
+internação e média móvel
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+
+3
+1
+/3
+
+3
+/4
+
+6
+/4
+
+9
+/4
+
+1
+2
+/4
+
+1
+5
+/4
+
+1
+8
+/4
+
+2
+1
+/4
+
+2
+4
+/4
+
+2
+7
+/4
+
+3
+0
+/4
+
+3
+/5
+
+6
+/5
+
+9
+/5
+
+1
+2
+/5
+
+1
+5
+/5
+
+1
+8
+/5
+
+2
+1
+/5
+
+2
+4
+/5
+
+2
+7
+/5
+
+3
+0
+/5
+
+2
+/6
+
+5
+/6
+
+8
+/6
+
+1
+1
+/6
+
+1
+4
+/6
+
+1
+7
+/6
+
+2
+0
+/6
+
+2
+3
+/6
+
+2
+6
+/6
+
+2
+9
+/6
+
+2
+/7
+
+5
+/7
+
+8
+/7
+
+1
+1
+/7
+
+1
+4
+/7
+
+1
+7
+/7
+
+2
+0
+/7
+
+2
+3
+/7
+
+2
+6
+/7
+
+2
+9
+/7
+
+1
+/8
+
+4
+/8
+
+7
+/8
+
+1
+0
+/8
+
+1
+3
+/8
+
+1
+6
+/8
+
+1
+9
+/8
+
+2
+2
+/8
+
+2
+5
+/8
+
+2
+8
+/8
+
+3
+1
+/8
+
+3
+/9
+
+6
+/9
+
+9
+/9
+
+1
+2
+/9
+
+1
+5
+/9
+
+1
+8
+/9
+
+N
+o
+
+d
+e
+
+ ó
+b
+
+it
+o
+
+s
+
+Data do óbito
+
+Média móvel 7 dias
+
+0
+
+5
+
+10
+
+15
+
+20
+
+25
+
+30
+
+35
+
+40
+
+45
+
+50
+
+12
+/3
+
+15
+/3
+
+18
+/3
+
+21
+/3
+
+24
+/3
+
+27
+/3
+
+30
+/3
+
+2/
+4
+
+5/
+4
+
+8/
+4
+
+11
+/4
+
+14
+/4
+
+17
+/4
+
+20
+/4
+
+23
+/4
+
+26
+/4
+
+29
+/4
+
+2/
+5
+
+5/
+5
+
+8/
+5
+
+11
+/5
+
+14
+/5
+
+17
+/5
+
+20
+/5
+
+23
+/5
+
+26
+/5
+
+29
+/5
+
+1/
+6
+
+4/
+6
+
+7/
+6
+
+10
+/6
+
+13
+/6
+
+16
+/6
+
+19
+/6
+
+22
+/6
+
+25
+/6
+
+28
+/6
+
+1/
+7
+
+4/
+7
+
+7/
+7
+
+10
+/7
+
+13
+/7
+
+16
+/7
+
+19
+/7
+
+22
+/7
+
+25
+/7
+
+28
+/7
+
+31
+/7
+
+3/
+8
+
+6/
+8
+
+9/
+8
+
+12
+/8
+
+15
+/8
+
+18
+/8
+
+21
+/8
+
+24
+/8
+
+27
+/8
+
+30
+/8
+
+2/
+9
+
+5/
+9
+
+8/
+9
+
+11
+/9
+
+14
+/9
+
+N
+o
+
+d
+e
+
+ c
+as
+
+o
+s 
+
+co
+n
+
+fir
+m
+
+ad
+o
+
+s 
+co
+
+m
+ S
+
+R
+A
+
+G
+
+Data de internação
+
+Média móvel 7 dias
+
+
+
+INFORME EPIDEMIOLÓGICO - COVID-19
+EDIÇÃO n° 169 - Dados preliminares, atualizados em 18.09.2020 às 12:00 horas
+
+SECRETARIA MUNICIPAL DE SAÚDE
+SUPERINTENDÊNCIA DE VIGILÂNCIA EM SAÚDE
+
+DIRETORIA DE VIGILÂNCIA EPIDEMIOLÓGICA
+GERÊNCIA DE DOENÇAS E AGRAVOS TRANSMISSÍVEIS
+
+CENTRO DE INFORMAÇÕES ESTRATÉGICAS E RESPOSTA EM 
+VIGILÂNCIA EM SAÚDE
+
+Fonte dos dados: SIVEP-Gripe; E-SUS VE e CIEVS-Goiânia/GEDAT/DVE/SVS
+
+POR FAVOR, 
+FIQUE EM CASA.
+
+Página 2
+
+Quadro 1 – Óbitos confirmados segundo características sociodemográficas, sinais e sintomas, fatores de 
+risco e tempo de internação na UTI
+
+* Dentre os óbitos, 220 não foram internados em UTI e 157 estão em investigação.
+
+Figura 4 – Número e percentual de casos segundo 
+sexo
+
+Figura 5 – Número e percentual de casos segundo 
+faixa etária
+
+26241
+53% 23250
+
+47%
+
+0
+
+3000
+
+6000
+
+9000
+
+12000
+
+15000
+
+18000
+
+21000
+
+24000
+
+27000
+
+30000
+
+N
+º 
+
+d
+e
+
+ c
+a
+
+so
+s
+
+Sexo
+
+Feminino Masculino
+
+998
+2%
+
+2.398
+4%
+
+21.143
+43%
+
+17.232
+35%
+
+7.720
+16%
+
+0
+2000
+4000
+6000
+8000
+
+10000
+12000
+14000
+16000
+18000
+20000
+22000
+24000
+
+< 10 10 a 19 20 a 39 40 a 59 ≥60 
+
+N
+º 
+
+ d
+e
+
+ c
+a
+
+so
+s
+
+Faixa Etária
+
+Figura 6 – Número e percentual de casos em profissionais da área da saúde de acordo com a categoria
+
+1%
+1%
+
+2%
+
+2%
+
+2%
+
+2%
+
+3%
+
+3%
+
+3%
+
+4%
+
+5%
+
+15%
+17%
+27% Técnico(a ) de enfermagem
+
+Médico(a)
+
+Enfermeiro(a)
+
+Agente Comunitá rio de Saúde
+
+Recepcionista
+
+Fisioterapeuta
+
+Farm acêutico(a)
+
+Cirurgião-Dentista
+
+Técnico(a ) de laboratório
+
+Biomédico(a)
+
+Técnico(a ) em radiologia
+
+Nutricionista
+
+Técnico(a ) em odontologia
+
+Psicólogo
+
+2416
+5%47075
+
+95%
+
+Trabalhador da Saúde
+
+Não trabalhador da Saúde
+
+n %
+Masculino 707 60%
+Feminino 480 40%
+≥ 60 anos 935 79%
+40 - 59 anos 200 17%
+20 - 39 anos 49 4%
+10 - 19 anos 1 0%
+0 - 09 anos 2 0%
+Dispneia 982 83%
+Tosse 791 67%
+Febre 694 58%
+Diabetes 356 30%
+Cardiopatia 423 36%
+Doença Renal 87 7%
+Pneumopatia 89 7%
+Obesidade 77 6%
+Hipertensão 294 25%
+Internação em UTI* 810 68%
+< 5 dias 231 29%
+5 a 10 dias 260 32%
+>10 dias 319 39%
+Sim 10 1%
+Não 1177 99%
+
+Sinais e sintomas 
+
+Características
+
+Profissional da Saúde
+
+Óbitos (n=1187)
+
+Idade 
+
+Sexo 
+
+Fatores de risco
+
+Tempo de internação na UTI
+
+
+
+Elaboração: Centro de Informações Estratégicas e Resposta em Vigilância em Saúde (CIEVS): Sheila de Arruda, 
+Adriana Magalhães, Bárbara Mariotto, Priscilla Silva, Laura Branquinho, Divânia Dias, Lílian Pimentel, Alessandra Abreu.
+Gerência de Doenças e Agravos Transmissíveis: Sara Fleury Lobo e Marília Belmira de Castro Regô
+Diretoria de Vigilância Epidemiológica: Grécia Carolina Pessoni
+Superintendência de Vigilância em Saúde: Yves Mauro Fernandes Ternes
+Secretaria Municipal de Saúde: Fátima Mrué
+
+INFORME EPIDEMIOLÓGICO - COVID-19
+EDIÇÃO n° 169 - Dados preliminares, atualizados em 18.09.2020 às 12:00 horas
+
+SECRETARIA MUNICIPAL DE SAÚDE
+SUPERINTENDÊNCIA DE VIGILÂNCIA EM SAÚDE
+
+DIRETORIA DE VIGILÂNCIA EPIDEMIOLÓGICA
+GERÊNCIA DE DOENÇAS E AGRAVOS TRANSMISSÍVEIS
+
+CENTRO DE INFORMAÇÕES ESTRATÉGICAS E RESPOSTA EM 
+VIGILÂNCIA EM SAÚDE
+
+Fonte dos dados: SIVEP-Gripe; E-SUS VE e CIEVS-Goiânia/GEDAT/DVE/SVS
+
+POR FAVOR, 
+FIQUE EM CASA.
+
+Página 3
+
+Figura 8 – Distribuição espacial dos casos por bairros e distritos sanitários no município de Goiânia
+
+Bairro Nº Casos confirmados
+
+*Dentre os 49.491 casos confirmados, 7.147 casos estão sob análise 
+de CEP.
+
+Figura 7 – Número e percentual de internação hospitalar e tipo de hospital do total dos casos
+
+53%
+
+47%
+
+0%
+
+20%
+
+40%
+
+60%
+
+80%
+
+100%
+
+Público Privado
+
+46222
+93%
+
+3269
+7%
+
+Não foram internados
+
+Foram internados
+
+Dentre os indivíduos 
+internados, 1462 (45%) 
+
+necessitaram de UTI.
+
+Bairro Nº Casos confirmados
+
+Setor Bueno 1719
+
+Jardim América 1240
+
+Setor Oeste 1008
+
+Jd. Novo Mundo 967
+
+Setor Central 887
+
+Parque Amazônia 838
+
+Setor Pedro Ludovico 778
+
+Jd. Guanabara 666
+
+Jd. Goiás 659
+
+Setor Leste Universitário 593
+
+Conjunto Vera Cruz 590
+
+Jd. Curitiba 580
+
+Jd. Nova Esperanca 526
+
+Setor Urias Magalhaes 493
+
+Jd. Balneário Meia Ponte 488
+
+Parque Atheneu 485
+
+Cidade Jardim 476
+
+Vila Finsocial 466
+
+Setor Sudoeste 461
+
+Setor Morada do Sol 429
+
+Setor Parque Tremendão 428
+
+Res. Recanto do Bosque 400
+
+Setor Marista 387
+
+Setor Campinas 383
+
+Setor Leste Vila Nova 374
+
+Setor Aeroporto 340
+
+Setor Bela Vista 332
+
+Goiânia 2 330
+
+Jd. Europa 318
+
+Res. Itaipú 317
+
+Setor Negrão de Lima 309
+
+Setor Sul 288
+
+Nova Suiça 287
+
+Parque Industrial João Braz 275
+
+Res. Eldorado 273
+
+Setor Coimbra 272
+
+Setor Santos Dumont 267
+
+Capuava 263
+
+Setor São Jose 262
+
+Jd. Atlântico 253
+
+Parque Oeste Industrial 248
+
+Setor Recanto das Minas Gerais 240
+
+da Vitória 226
+
+Setor Estrela Dalva 222
+
+Res. Vale dos Sonhos I 221
+
+Faicalville 221
+
+Santa Genoveva 214
+
+Vila Redenção 212
+
+Setor Centro Oeste 211
+
+Alto da Glória 207
+
+Vila Santa Helena 206
+
+Jd. Mariliza 205
+
+Setor Novo Horizonte 203
+
+Vila Alpes 200
+
+Jd. Itaipu 189
+
+Setor dos Funcionários 183
+
+Setor Jaó 180
+
+Jd. Vila Boa 178
+
+São Carlos 178
+
+Setor Criméia Oeste 175
+
+Res. Goiânia Viva 174
+
+Goiá 167
+
+Jd. São José 167
+
+Setor Criméia Leste 167
+
+Jd. Presidente 166
+
+Floresta 159
+
+Vila Jardim São Judas Tadeu 159
+
+Jd. Guanabara II 158
+
+Jd. Liberdade 157
+
+Setor Garavelo 155
+
+Jd. Guanabara III 152
+
+Jd. Petrópolis 152
+
+Setor Candida de Morais 148
+
+Res. Brisas da Mata 148
+
+Jd. Bela Vista 142
+
+Setor Norte Ferroviário 141
+
+Vila João Vaz 139
+
+Vila Itatiaia 138
+
+São Francisco 137
+
+Jd. Planalto 137
+
+Vila Pedroso 136
+
+Res. Granville 132
+
+Vila Mutirão I 132
+
+Conjunto Habitacional Madre Germana 2 128
+
+Vila Jardim Pompéia 128
+
+Setor Rio Formoso 125
+
+Outros 13.674
+
+Total bairros: 575 42.344*
+
+
