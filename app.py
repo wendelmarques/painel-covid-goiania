@@ -380,7 +380,7 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Casos ativos por data de notificação e média movel"),
+                            html.H2("Casos ativos por data de notificação e média móvel"),
                             html.H6("Fonte: Secretaria Estadual de Saúde de Goiás"),
 
                         ],
