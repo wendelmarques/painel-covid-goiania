@@ -29,6 +29,7 @@ FINALIZADO (CONSTANTE ATUALIZAÇÃO DOS DADOS)
 <p align="center">
   <a href="#about">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#objetivos">Objetivos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#dados">Dados</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#get">Execução</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#tecnicas">Técnicas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -49,6 +50,15 @@ O projeto utiliza abordagens de ciência dos dados para desenvolver um painel de
   - Coletar dados sobre a COVID-19 no âmbito municipal (por bairro)
   - Construir esquemas de visualização (mapas e gráficos) possuam interpretação simples e objetiva
   
+<a id="features"></a>
+## Features
+*    Bubble Map - casos confirmados por bairro
+*    Gráfico de barras e média móvel sobre casos ativos por data de notificação
+*    Gráfico de barras e média móvel sobre casos confirmados por data de notificação 
+*    Gráfico de barras e média móvel sobre óbitos confirmados por data de notificação 
+*    Bar race - casos confirmados por bairro
+*    Bar race - casos confirmados por região
+
 <a id="dados"></a>
 ## Dados
 Basicamente, algoritmos coletam dados do site da [Prefeitura de Goiânia](https://www.goiania.go.gov.br/) e realiza a plotagem por bairro e região. Para criação dos gráficos que contém dados da cidade como um todo (sem considerar os bairros individualmente), um dataset do [Brasil.IO](https://brasil.io/dataset/covid19/caso/?search=&date=&state=&city=&place_type=&is_last=&city_ibge_code=5208707&order_for_place=) foi utilizado. As informações isolados sobre recuperações, casos confirmados e óbitos são adicionados manualmente, elas são retiradas do site da Prefeitura de Goiânia e da plataforma [COVID Goiás - UFG](https://covidgoias.ufg.br/). Os CEPs dos bairros foram coletados do site [guiamaisCEP](https://cep.guiamais.com.br/) e, em seguida, para obter as coordenadas de cada um deles, a [Geocoding API - Google Maps Plataform](https://developers.google.com/maps/documentation/geocoding/) foi utilizada. 
