@@ -219,9 +219,9 @@ section {
 
 }
 
-.mini_container_recuperados {
+.mini_container_ativos {
   border-radius: 13px;
-  background-color: #2C8C99;
+  background-color: #4c4c9d;
   margin: 10px;
   padding: 15px;
   position: relative;
@@ -236,7 +236,7 @@ section {
 
 .mini_container_confirmados {
   border-radius: 13px;
-  background-color: #7B287D;
+  background-color: #976391;
   margin: 10px;
   padding: 15px;
   position: relative;
@@ -265,7 +265,7 @@ section {
 
 .mini_container_obitos {
   border-radius: 13px;
-  background-color: #330C2F;
+  background-color: #712f79;
   margin: 10px;
   padding: 15px;
   position: relative;

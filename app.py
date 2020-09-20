@@ -111,9 +111,9 @@ app.config.suppress_callback_exceptions = True
 ############################## alterar_manuamente ######################
 
 
-total_confirmados_com_outros_bairros = "48 529"
-obitos_confirmados = "1 163"
-total_recuperados = "45 530"
+total_confirmados_com_outros_bairros = "47.559"
+obitos_confirmados = "1.196"
+total_ativos = "1.721"
 # https://saude.goiania.go.gov.br/goiania-contra-o-coronavirus/
 
 
@@ -170,6 +170,12 @@ fontes_footer2 = html.Div(
             href='https://developers.google.com/maps/documentation/geocoding',
             children=[
                 html.Img(src=app.get_asset_url('maps.png'), width=55, height=49),
+            ]
+        ),
+        html.A(
+            href='#',
+            children=[
+                html.Img(src=app.get_asset_url('estado.png'), width=300, height=103),
             ]
         ),
         
@@ -246,7 +252,7 @@ app.layout = html.Div(
                                 ),
 
                                 html.H4(
-                                    "Informações sobre a evolução dos casos confirmados em Goiânia", 
+                                    "Informações sobre os casos confirmados e óbitos em Goiânia", 
                                     style={"margin-top": "10px"}
                                 ),
                             ],
@@ -264,7 +270,7 @@ app.layout = html.Div(
                 html.H4("Aviso"),
 
                 html.H5(
-                    "Os dados utilizados para geração do mapa e dos gráficos dos bairros e regiões foram extraídos dos Informes Epidemiológicos publicados (em PDFs) pela Prefeitura de Goiânia, por meio de uma técnica chamada Data Scraping (algoritmos que realizam a tarefa de extração). Além disso, vale ressaltar que são divulgadas apenas informações sobre alguns bairros - os que possuem mais casos confirmados acumulados, por isso, foram extraídos dados de 114 bairros. Os demais gráficos contêm dados de toda a cidade.", 
+                    "Os dados utilizados para geração do mapa e dos gráficos 'casos acumulados por região' e 'casos acumulados por bairro' foram extraídos dos Informes Epidemiológicos publicados (em PDFs) pela Prefeitura de Goiânia, por meio de uma técnica chamada Data Scraping (algoritmos que realizam a tarefa de extração). ", 
                     style={"margin-top": "10px"}
                 ),
 
@@ -278,11 +284,20 @@ app.layout = html.Div(
                 html.Div(
                     [
                         html.A(
-                            html.Button("saude.goiania.go.gov.br", id="learn-more-button"),
+                            html.Button("saude.go.gov.br", id="learn-more-button_estado"),
+                            href="https://www.saude.go.gov.br/",
+                        )
+                    ],
+                    id="button_estado",
+                ),
+                html.Div(
+                    [
+                        html.A(
+                            html.Button("saude.goiania.go.gov.br", id="learn-more-button_cidade"),
                             href="https://saude.goiania.go.gov.br/goiania-contra-o-coronavirus/informe-epidemiologico-covid-19/",
                         )
                     ],
-                    id="button",
+                    id="button_cidade",
                 ),
 
 
@@ -318,14 +333,14 @@ app.layout = html.Div(
 
                                         html.Div(
                                             [
-                                                'Recuperações', html.Br(), total_recuperados
+                                                'Casos ativos', html.Br(), total_ativos
                                             ],
-                                            className="mini_container_recuperados one columns",
+                                            className="mini_container_ativos one columns",
                                         ),
 
                                         html.Div(
                                             [
-                                                'Última atualização', html.Br(), world['last_date']
+                                                'Última atualização', html.Br(), '19-09-2020',
                                             ],
                                             className="mini_container_branco one columns",
                                         ),
@@ -349,7 +364,9 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Evolução dos casos acumulados por dia e por bairro")
+                            html.H2("Evolução dos casos acumulados por dia e por bairro"),
+                            html.H5("(116 bairros)"),
+                            html.H6("Fonte: Prefeitura de Goiânia"),
                         ],
                         className="control_label",
                 ),
@@ -363,13 +380,14 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Casos confirmados por data* de divulgação e média movel"),
-                            html.H6("*Data na qual a prefeitura divulgou e não necessariamente a data do resultado do exame."),
+                            html.H2("Casos ativos por data de notificação e média movel"),
+                            html.H6("Fonte: Secretaria Estadual de Saúde de Goiás"),
+
                         ],
                         className="control_label",
                 ),
                 
-                dcc.Graph(id='grafico_casos_por_dia', figure=world['grafico_bar_casos_por_dia']),                              
+                dcc.Graph(id='grafico_casos_ativos_por_dia', figure=world['grafico_casos_ativos']),                              
             ], 
             className="pretty_container",
             style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
@@ -379,17 +397,13 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Óbitos por data* de divulgação e média móvel"),
-                            html.H6("*Data na qual a prefeitura divulgou e não necessariamente a data do óbito."),
-                            html.H6("A média móvel por data do óbito está disponivel no site:"),
-                            html.H6("saude.goiania.go.gov.br/goiania-contra-o-coronavirus/informe-epidemiologico-covid-19"),
-                            
-
+                            html.H2("Casos confirmados por data de notificação e média móvel"), 
+                            html.H6("Fonte: Secretaria Estadual de Saúde de Goiás"),                                           
                         ],
                         className="control_label",
                 ),
                 
-                dcc.Graph(id='grafico_obitos_por_dia', figure=world['grafico_bar_obitos_por_dia']),                              
+                dcc.Graph(id='grafico_casos_por_dia', figure=world['grafico_casos_por_dia']),                              
             ], 
             className="pretty_container",
             style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
@@ -401,34 +415,18 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Casos confirmados acumulados por dia"),
-                            html.H4("Fonte: brasil.io/dataset/covid19"),                                                
+                            html.H2("Óbitos por data de notificação e média móvel"),
+                            html.H6("Fonte: Secretaria Estadual de Saúde de Goiás"),
                         ],
                         className="control_label",
                 ),
                 
-                dcc.Graph(id='grafico_cidade_casos', figure=world['grafico_bar_casos']),                              
+                dcc.Graph(id='grafico_obitos_por_dia', figure=world['grafico_obitos_dia']),                              
             ], 
             className="pretty_container",
             style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
         ),
-        brs,
 
-        html.Div(            
-            [   
-                html.P(
-                        [
-                            html.H2("Casos fatais acumulados por dia"),
-                            html.H4("Fonte: brasil.io/dataset/covid19"),                                                
-                        ],
-                        className="control_label",
-                ),
-                
-                dcc.Graph(id='grafico_cidade_obitos', figure=world['grafico_bar_obitos']),                              
-            ], 
-            className="pretty_container",
-            style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
-        ),
 
        brs,
 
@@ -437,6 +435,7 @@ app.layout = html.Div(
                 html.P(
                         [
                             html.H2("Evolução dos casos acumulados por bairro"), html.H6("(alguns bairros)"),
+                            html.H6("Fonte: Prefeitura de Goiânia"),
                         ],
                         className="control_label",
                 ),
@@ -454,7 +453,8 @@ app.layout = html.Div(
             [   
                 html.P(
                         [
-                            html.H2("Evolução dos casos acumulados por região")
+                            html.H2("Evolução dos casos acumulados por região"),
+                            html.H6("Fonte: Prefeitura de Goiânia"),
                         ],
                         className="control_label",
                 ),
@@ -465,6 +465,23 @@ app.layout = html.Div(
             style={"display": "flex", "flex-direction": "column", "justify-content": "center"},
         ),
 
+        brs,
+        html.Div(
+            [
+                html.Div(
+                    [   
+                        html.H2("Dados"),
+                        html.H5("Secretaria Estadual de Saúde de Goiás"),
+                        html.H5("Prefeitura de Goiânia - Informe Epidemiológico - COVID-19"),
+                        # html.Img(src=app.get_asset_url('wordcloud.png')),
+
+                    ],
+                    # className="pretty_container",
+                ),
+
+            ],
+            className="row flex-display",
+        ),
         brs,
 
         html.Div(

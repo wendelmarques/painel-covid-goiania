@@ -15,41 +15,49 @@ pd.set_option('chained_assignment', None)
 
 ##############cria_grafico########################
 
-def cria_grafico_casos(df_grafico):
-    fig = px.bar(df_grafico, x='Data', y='Casos confirmados', color='Casos confirmados', labels={'Casos confirmados':'Quantidade de casos confirmados'})
-    return fig.update(layout_coloraxis_showscale=False)
-
-
-def cria_grafico_obitos(df_grafico):
-    fig = px.bar(df_grafico, x='Data', y='Óbitos', color='Óbitos', labels={'Óbitos':'Quantidade de casos fatais'})
-    return fig.update(layout_coloraxis_showscale=False)
-
-def cria_grafico_casos_por_dia(df):
-    fig = px.bar(df, x='data', y='casos', labels={'casos':'N° de casos confirmados diários', 'data': 'Data de divulgação'})
-
-    fig.add_trace(
-    go.Scatter(
-        x=df['data'],
-        y=df['MM_casos'],
-        name='Média Móvel - 7 dias',
-        hovertemplate= "Média Móvel: %{x}<br>Data: %{y}<extra></extra>",
-
-    ))
-
-    return fig.update_traces()
-
-
-def cria_grafico_obitos_por_dia(df):
-    fig = px.bar(df, x='data', y='obitos', labels={'obitos':'N° de óbitos diários', 'data': 'Data de divulgação'})
+def cria_grafico_casos_por_dia(casos_por_dia):
+    fig = px.bar(casos_por_dia, x='data_notificacao', y='num_casos', labels={'num_casos':'N° de casos confirmados', 
+                                                                         'data_notificacao': 'Data de notificação',})
 
     fig.add_trace(
         go.Scatter(
-            x=df['data'],
-            y=df['MM_obitos'],
-            name='Média Móvel - 7 dias',
+            x=casos_por_dia['data_notificacao'],
+            y=casos_por_dia['MM_casos'],
+            name='Média Móvel<br>(7 dias)',        
             hovertemplate= "Média Móvel: %{x}<br>Data: %{y}<extra></extra>",
 
-    ))
+        )
+    )
+    return fig.update()
+
+
+def cria_grafico_casos_ativos(casos_ativos):
+    fig = px.bar(casos_ativos, x='data_notificacao', y='num_casos', labels={'num_casos':'N° de casos ativos', 
+                                                                                    'data_notificacao': 'Data de notificação'})
+
+    fig.add_trace(
+        go.Scatter(
+            x=casos_ativos['data_notificacao'],
+            y=casos_ativos['MM_casos'],
+            name='Média Móvel<br>(7 dias)',        
+            hovertemplate= "Média Móvel: %{x}<br>Data: %{y}<extra></extra>",
+        )
+    )
+
+    return fig.update()
+
+def cria_grafico_obitos_dia(obitos_por_dia):
+    fig = px.bar(obitos_por_dia, x='data_notificacao', y='num_casos', labels={'num_casos':'N° de óbitos', 
+                                                                            'data_notificacao': 'Data de notificação',})
+
+    fig.add_trace(
+        go.Scatter(
+            x=obitos_por_dia['data_notificacao'],
+            y=obitos_por_dia['MM_casos'],
+            name='Média Móvel<br>(7 dias)',        
+            hovertemplate= "Média Móvel: %{x}<br>Data: %{y}<extra></extra>",
+        )
+    )
 
     return fig.update()
 
@@ -101,7 +109,7 @@ def process_pandemic_data(df):
 
 def create_world_fig(df, mapbox_access_token):
 
-      days = np.unique(df_gyn['date'])
+      days = np.unique(df_mapa['date'])
       frames = [{   
             'name':'frame_{}'.format(day),
             'data':[{
@@ -204,31 +212,28 @@ if __name__ =="__main__":
 
     # Carregando informações necessárias
     mapbox_access_token = f.config['mapbox']['secret_token']
-    raw_dataset_path_dataset_covid = f.RAW_PATH + f.config['path']['name']
-    raw_dataset_path_dataset_grafico_acumulado = f.RAW_PATH + f.config['path']['grph_acumulado']
-    raw_dataset_path_dataset_grafico_por_dia = f.RAW_PATH + f.config['path']['grph_dia']
+    raw_dataset_path_dataset_covid_mapa = f.RAW_PATH + f.config['path']['mapa']
+    raw_dataset_path_dataset_grafico_casos_por_dia = f.RAW_PATH + f.config['path']['grph_casos_por_dia']
+    raw_dataset_path_dataset_grafico_obitos_dia = f.RAW_PATH + f.config['path']['grph_obitos_por_dia']
+    raw_dataset_path_dataset_grafico_casos_ativos = f.RAW_PATH + f.config['path']['grph_casos_ativos']
     
-    #criacao do dataframe
-    df_gyn = pd.read_csv(raw_dataset_path_dataset_covid, sep=',')
-    
+    ####### MAPA #########
+    df_mapa = pd.read_csv(raw_dataset_path_dataset_covid_mapa, sep=',')
     #cria lista de bairros 
-    bairros = cria_lista_bairros(np.unique(df_gyn['Zone']))
-
-
-    df_world = process_pandemic_data(df_gyn)
+    bairros = cria_lista_bairros(np.unique(df_mapa['Zone']))
+    df_world = process_pandemic_data(df_mapa)
     df_total_kpi = df_world.groupby('date').sum().sort_index().iloc[-1]
 
-    #cria dataframe com o dados para o grafico
-    df_cidade_acumulado = pd.read_csv(raw_dataset_path_dataset_grafico_acumulado, sep=',')
-    df_cidade_por_dia = pd.read_csv(raw_dataset_path_dataset_grafico_por_dia, sep=',')
-    
-    
-    #cria grafico
-    grafico_cidade_casos = cria_grafico_casos(df_cidade_acumulado)
-    grafico_cidade_obitos = cria_grafico_obitos(df_cidade_acumulado)
-    grafico_casos_por_dia = cria_grafico_casos_por_dia(df_cidade_por_dia)
-    grafico_obitos_por_dia = cria_grafico_obitos_por_dia(df_cidade_por_dia)
 
+    #########  GRAFICOS ###########
+    #cria dataframe com o dados para o grafico
+    df_casos_por_dia= pd.read_csv(raw_dataset_path_dataset_grafico_casos_por_dia, sep=',')
+    df_obitos_dia = pd.read_csv(raw_dataset_path_dataset_grafico_obitos_dia, sep=',')
+    df_casos_ativos = pd.read_csv(raw_dataset_path_dataset_grafico_casos_ativos, sep=',')
+    #cria graficos
+    grafico_casos_por_dia = cria_grafico_casos_por_dia(df_casos_por_dia)
+    grafico_obitos_dia = cria_grafico_obitos_dia(df_obitos_dia)
+    grafico_casos_ativos = cria_grafico_casos_ativos(df_casos_ativos)
     # preparando map
     fig_world = create_world_fig(df_world, mapbox_access_token=mapbox_access_token)
 
@@ -240,10 +245,10 @@ if __name__ =="__main__":
     # Armazenamento de todas as informações necessárias para o aplicativo
     save = {
         'figure':fig_world,
-        'grafico_bar_casos': grafico_cidade_casos,
-        'grafico_bar_obitos': grafico_cidade_obitos,
-        'grafico_bar_obitos_por_dia': grafico_obitos_por_dia,
-        'grafico_bar_casos_por_dia': grafico_casos_por_dia,
+        'grafico_casos_ativos': grafico_casos_ativos,
+        'grafico_casos_por_dia': grafico_casos_por_dia,
+        'grafico_obitos_dia': grafico_obitos_dia,
+        # 'grafico_bar_casos_por_dia': grafico_casos_por_dia,
         'last_date':dataFormatada,
         'lista_bairros': bairros,
         'total_confirmed': f.spacify_number(int(df_total_kpi['confirmed'])),
