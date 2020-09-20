@@ -91,6 +91,9 @@ $ git clone https://github.com/wendelmarques/painel-covid-goiania.git
 ```console
 $ cd painel-covid-goiania
 ```
+```console
+$ python3 -m venv painel
+```
 
 4. Com o interpretador Python configurado, execute a instalação das bibliotecas:
 
