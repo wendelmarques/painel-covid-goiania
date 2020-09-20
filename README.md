@@ -150,6 +150,7 @@ Painel COVID GYN usa as seguintes tecnologias:
 
 <a id="fontes"></a>
 ## Fontes
+*    [Secretaria Estadual de Saúde de Goiás](https://extranet.saude.go.gov.br/pentaho/api/repos/:coronavirus:paineis:painel.wcdf/generatedContent)
 *    [Prefeitura de Goiânia](https://www.goiania.go.gov.br/)
 *    [Brasil.IO - O Brasil em dados libertos](https://brasil.io/dataset/covid19/caso/?search=&date=&state=&city=&place_type=&is_last=&city_ibge_code=5208707&order_for_place=)
 *    [COVID Goiás - UFG](https://covidgoias.ufg.br/)
