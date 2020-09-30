@@ -1,17 +1,24 @@
 
 <header> 
 <h1 align="center">Painel COVID GYN</h1>
+<h3 align="center">  Informações sobre a evolução da COVID-19 em Goiânia </h3>
 </header>
 
-<h3 align="center">
-Informações sobre a evolução dos casos confirmados em Goiânia
-  <br>  <br>
-painel-covid-goiania.herokuapp.com
- </p>
-<p align="center">
-<img src="https://media.giphy.com/media/RlMjsjnmtp8K5CkgRU/giphy.gif">
- </p>
+<br>  
+<br>
 
+<h3 align="center">
+  painel-covid-goiania.herokuapp.com
+ </h3>
+ 
+ <br>  
+ <br>
+
+<p align="center">
+  <br>  
+ <br>
+    <img src="https://media.giphy.com/media/RlMjsjnmtp8K5CkgRU/giphy.gif">
+</p>
 
 <p align="center">
 <img src="https://img.shields.io/github/repo-size/wendelmarques/mapeamento-medias-enem-folium?color=blueviolet">
@@ -21,7 +28,7 @@ painel-covid-goiania.herokuapp.com
 </p>
 
 <h4 align="center"> 
-FINALIZADO (CONSTANTE ATUALIZAÇÃO DOS DADOS)
+FINALIZADO (ATUALIZAÇÃO CONSTANTE DOS DADOS)
 </h4> 
 
 <div align="center">
@@ -40,6 +47,7 @@ FINALIZADO (CONSTANTE ATUALIZAÇÃO DOS DADOS)
   <a href="#creator">Criador</a>
 </p>
 </div>
+
 
 <a id="about"></a>
 ## Sobre o projeto
