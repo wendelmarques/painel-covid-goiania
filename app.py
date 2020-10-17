@@ -111,9 +111,9 @@ app.config.suppress_callback_exceptions = True
 ############################## alterar_manuamente ######################
 
 
-total_confirmados_com_outros_bairros = "47.559"
-obitos_confirmados = "1.196"
-total_ativos = "1.721"
+total_confirmados_com_outros_bairros = "63.365"
+obitos_confirmados = "1.585"
+total_ativos = "648"
 # https://saude.goiania.go.gov.br/goiania-contra-o-coronavirus/
 
 
@@ -340,7 +340,7 @@ app.layout = html.Div(
 
                                         html.Div(
                                             [
-                                                'Última atualização', html.Br(), '19-09-2020',
+                                                'Última atualização', html.Br(), '16-10-2020',
                                             ],
                                             className="mini_container_branco one columns",
                                         ),
@@ -365,7 +365,7 @@ app.layout = html.Div(
                 html.P(
                         [
                             html.H2("Evolução dos casos acumulados por dia e por bairro"),
-                            html.H5("(116 bairros)"),
+                            html.H5("(117 bairros)"),
                             html.H6("Fonte: Prefeitura de Goiânia"),
                         ],
                         className="control_label",
